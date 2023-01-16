@@ -6,4 +6,6 @@ ls | grep .ts | sort -n -k1.5 | awk 'BEGIN{s="concat:";}{s=s$0"|";}END{cmd = "ff
 rm -rf *.ts
 elif [[ $1 =~ 'voyeurhit' ]];then
 curl -sSL -e 'https://member.voyeurhit.com/' -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' -O $1
+else
+echo 'nolink'
 fi
