@@ -1,0 +1,14 @@
+apt-get update
+apt-get install -y curl vim git tree nginx ffmpeg 
+
+
+~/.bashrc
+if [[ $- == *i* ]]
+then
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
+
+alias ci='cd /var/www/html/mp'
+alias dl='~/share/dl.sh'
+
