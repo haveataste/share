@@ -85,3 +85,14 @@ for((i=1;i<6;i++)); do echo $i; done
 for i in `seq 1 5`; do echo $i; done
 
 echo $# $0 $1 $2 $$
+
+# 一些程序从标准输入stdin中获取输入。默认情况下，标准输入与键盘相连接。
+# 输出包括两种类型：程序的结果，被称为标准输出或者stdout。状态以及错误信息，被称为标准错误或者stderr。
+# 默认情况下，stdout和stderr 都被链接到屏幕上，而不是保存到文件中。重定向允许我们改变输出的去向和输入的来源。
+cat fn > a.txt
+cat fn >> a.txt
+cat < a.txt
+cat << a
+cat fn 2> error.txt
+cat fn &> all.txt
+cat fn > all.txt 2>&1
