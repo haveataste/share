@@ -1,0 +1,54 @@
+2023年 03月 07日 星期二 08:35:26 EST
+文件系统       类型      容量  已用  可用 已用% 挂载点
+udev           devtmpfs  460M     0  460M    0% /dev
+tmpfs          tmpfs      98M  732K   97M    1% /run
+/dev/vda1      ext4       20G   12G  7.1G   62% /
+tmpfs          tmpfs     489M     0  489M    0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M    0% /run/lock
+tmpfs          tmpfs     489M     0  489M    0% /sys/fs/cgroup
+overlay        overlay    20G   12G  7.1G   62% /var/lib/docker/overlay2/60a2a416b3794c93fd03f9a82d47bfc213d5438af59a29c21468abc797ce050d/merged
+tmpfs          tmpfs      98M     0   98M    0% /run/user/0
+
+2023年 04月 12日 星期三 07:05:39 EDT
+文件系统       类型      容量  已用  可用 已用% 挂载点
+udev           devtmpfs  460M     0  460M    0% /dev
+tmpfs          tmpfs      98M  748K   97M    1% /run
+/dev/vda1      ext4       20G   12G  7.2G   62% /
+tmpfs          tmpfs     489M     0  489M    0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M    0% /run/lock
+tmpfs          tmpfs     489M     0  489M    0% /sys/fs/cgroup
+overlay        overlay    20G   12G  7.2G   62% /var/lib/docker/overlay2/60a2a416b3794c93fd03f9a82d47bfc213d5438af59a29c21468abc797ce050d/merged
+tmpfs          tmpfs      98M     0   98M    0% /run/user/0
+
+2023年 04月 14日 星期五 09:20:50 EDT
+文件系统       类型      容量  已用  可用 已用% 挂载点
+udev           devtmpfs  460M     0  460M    0% /dev
+tmpfs          tmpfs      98M  816K   97M    1% /run
+/dev/vda1      ext4       20G   13G  5.8G   70% /
+tmpfs          tmpfs     489M     0  489M    0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M    0% /run/lock
+tmpfs          tmpfs     489M     0  489M    0% /sys/fs/cgroup
+overlay        overlay    20G   13G  5.8G   70% /var/lib/docker/overlay2/60a2a416b3794c93fd03f9a82d47bfc213d5438af59a29c21468abc797ce050d/merged
+tmpfs          tmpfs      98M     0   98M    0% /run/user/0
+overlay        overlay    20G   13G  5.8G   70% /var/lib/docker/overlay2/55412e63942eabd11f98e1dfb7823e91fd870cfed0ac1fae2e38baa3d0e784dd/merged
+
+2023年 06月 03日 星期六 07:14:04 EDT
+文件系统       类型      容量  已用  可用 已用% 挂载点
+udev           devtmpfs  460M     0  460M    0% /dev
+tmpfs          tmpfs      98M  672K   98M    1% /run
+/dev/vda1      ext4       20G   11G  7.6G   60% /
+tmpfs          tmpfs     489M     0  489M    0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M    0% /run/lock
+tmpfs          tmpfs     489M     0  489M    0% /sys/fs/cgroup
+tmpfs          tmpfs      98M  8.0K   98M    1% /run/user/0
+
+2023年 06月 04日 星期日 07:14:23 EDT
+文件系统       类型      容量  已用  可用 已用% 挂载点
+udev           devtmpfs  460M     0  460M    0% /dev
+tmpfs          tmpfs      98M  740K   97M    1% /run
+/dev/vda1      ext4       20G  5.2G   14G   28% /
+tmpfs          tmpfs     489M     0  489M    0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M    0% /run/lock
+tmpfs          tmpfs     489M     0  489M    0% /sys/fs/cgroup
+tmpfs          tmpfs      98M  8.0K   98M    1% /run/user/0
+overlay        overlay    20G  5.2G   14G   28% /var/lib/docker/overlay2/55412e63942eabd11f98e1dfb7823e91fd870cfed0ac1fae2e38baa3d0e784dd/merged
