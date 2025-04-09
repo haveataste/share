@@ -26,9 +26,10 @@ if len(vurls) != 0:
     for vurl in vurls:
         pattern = r'([^/?#]+)(?:\?.*)?$'
         vn = re.search(pattern, vurl).group(1)
-        if not r.sismember('upskirt', vn):
+        se = 'upskirt'
+        if not r.sismember(se, vn):
             cmd = 'curl -O ' + vurl
             os.system(cmd)
-            r.sadd(vn)
+            r.sadd(se, vn)
 
     r.close()
