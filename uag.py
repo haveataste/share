@@ -8,7 +8,7 @@ headers = {
 }
 response = requests.get(url=url, headers=headers)
 s = response.text
-print(len(s))
+print(len(s), end=' ')
 # 匹配视频资源地址
 pattern = r'https://video.twimg.com.+?mp4.+?(?=\\")'
 vurls = re.findall(pattern, s)
@@ -27,11 +27,8 @@ if len(vurls) != 0:
         pattern = r'([^/?#]+)(?:\?.*)?$'
         vn = re.search(pattern, vurl).group(1)
         if not r.sismember('upskirt', vn):
-            '''
             cmd = 'curl -O ' + vurl
             os.system(cmd)
             r.sadd(vn)
-            '''
-            print(vn)
 
     r.close()
