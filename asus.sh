@@ -12,13 +12,12 @@ if [ -d /mnt/asus ]; then
     sudo rm -rf /mnt/asus
 fi
 
-# mount tmpfs 20250324
+# 20250324 mount tmpfs
 sudo mkdir -p /mnt/asus
 sudo mount -t tmpfs -o size=4G tmpfs /mnt/asus
 cd /mnt/asus/
 
-# 20250329
-# ASUS Webstorage linux client
+# 20250329 ASUS Webstorage linux client
 curl -O https://gitee.com/kuugagoku/share/raw/master/software/asus.zip 
 unzip asus.zip && rm -rf asus.zip
 ./webstorage_main_process start
