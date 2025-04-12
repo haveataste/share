@@ -22,14 +22,17 @@ if len(vurls) != 0:
         username="default",
         password="vGtH9u3kGN6vesr1Yl1Fthe2iwvCVdPj",
     )
-    
+
+    count = 0
     for vurl in vurls:
         pattern = r'([^/?#]+)(?:\?.*)?$'
         vn = re.search(pattern, vurl).group(1)
         se = 'upskirt'
         if not r.sismember(se, vn):
-            cmd = 'curl -O ' + vurl
+            cmd = 'curl -s -O ' + vurl
             os.system(cmd)
             r.sadd(se, vn)
-
+            print(vn, str(round(os.path.getsize(vn)/1024/1024, 2))+'MB')
+            count += 1
+    print('downloaded:', count)
     r.close()
