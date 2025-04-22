@@ -23,13 +23,13 @@ if len(vurls) != 0:
         password="vGtH9u3kGN6vesr1Yl1Fthe2iwvCVdPj",
     )
 
+    se = 'upskirt'
+    if 'toilet' in url:
+        se = 'toilet'
     count = 0
     for vurl in vurls:
         pattern = r'([^/?#]+)(?:\?.*)?$'
         vn = re.search(pattern, vurl).group(1)
-        se = 'upskirt'
-        if 'toilet' in url:
-            se = 'toilet'
         if not r.sismember(se, vn):
             cmd = 'curl -s -O ' + vurl
             os.system(cmd)
