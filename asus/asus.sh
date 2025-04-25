@@ -18,7 +18,7 @@ sudo mount -t tmpfs -o size=4G tmpfs /mnt/asus
 cd /mnt/asus/
 
 # 20250329 ASUS Webstorage linux client
-curl -O https://gitee.com/kuugagoku/share/raw/master/software/asus.zip 
+curl -O https://github.com/haveataste/share/raw/refs/heads/master/asus/asus.zip
 unzip asus.zip && rm -rf asus.zip
 ./webstorage_main_process start
 ./webstorage_main_process status
@@ -39,5 +39,5 @@ fi
 if ! python -c "import redis" &> /dev/null; then
     pip3 install redis
 fi
-curl -O https://raw.githubusercontent.com/haveataste/share/refs/heads/master/uag.py
+curl -O https://raw.githubusercontent.com/haveataste/share/refs/heads/master/asus/uag.py
 #curl -O https://raw.githubusercontent.com/haveataste/share/refs/heads/master/vf.sh
