@@ -18,7 +18,7 @@ sudo mount -t tmpfs -o size=4G tmpfs /mnt/asus
 cd /mnt/asus/
 
 # 20250329 ASUS Webstorage linux client
-curl -O https://github.com/haveataste/share/raw/refs/heads/master/asus/asus.zip
+curl -sSL -O https://raw.githubusercontent.com/haveataste/share/refs/heads/master/asus/asus.zip
 unzip asus.zip && rm -rf asus.zip
 ./webstorage_main_process start
 ./webstorage_main_process status
