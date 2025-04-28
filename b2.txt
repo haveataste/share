@@ -88,7 +88,20 @@ b2 bucket get onebuck
     "revision": 2
 }
 
+usages:
+  b2 file cat                Download content of a file-like object identified by B2 URI directly to stdout.
+  b2 file download           Download the given file-like object, and store it in the given local file.
+  b2 file hide               Upload a new, hidden, version of the given file.
+  b2 file info               Print file info
+  b2 file large              Large file uploads management subcommands.
+  b2 file server-side-copy   Copy a file version to the given bucket (server-side, not via download+upload).
+  b2 file unhide             Delete the "hide marker" for a given file.
+  b2 file update             Update file settings.
+  b2 file upload             Upload single file to the given bucket.
+  b2 file url                Display download URL for a file
 b2 file url b2://onebuck/xz.jpg
 https://f005.backblazeb2.com/file/onebuck/xz.jpg
 b2 file upload onebuck fn nfn
 b2 file hide b2://onebuck/fn
+
+b2 sync share b2://onebuck/uag
