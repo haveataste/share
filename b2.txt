@@ -1,0 +1,94 @@
+# 20250428
+curl -sSL -o b2 https://github.com/Backblaze/B2_Command_Line_Tool/releases/latest/download/b2-linux
+chmod a+x b2
+sudo cp b2 /usr/bin
+
+b2 account authorize
+Backblaze application key ID: 0052bac485063ae0000000003
+Backblaze application key: K00504+bNDVTXextPF+khXqR5cfP4J4
+{
+  "accountAuthToken": "4_0052bac485063ae0000000003_01bc030e_9335e8_acct_wV9tiJzvWPLnghqymFBQ181qZn0=",
+  "accountFilePath": "/home/ld199liu/.config/b2/account_info",
+  "accountId": "2bac485063ae",
+  "allowed": {
+      "bucketId": null,
+      "bucketName": null,
+      "capabilities": [
+          "bypassGovernance",
+          "deleteBuckets",
+          "deleteFiles",
+          "deleteKeys",
+          "listBuckets",
+          "listFiles",
+          "listKeys",
+          "readBucketEncryption",
+          "readBucketLogging",
+          "readBucketNotifications",
+          "readBucketReplications",
+          "readBucketRetentions",
+          "readBuckets",
+          "readFileLegalHolds",
+          "readFileRetentions",
+          "readFiles",
+          "shareFiles",
+          "writeBucketEncryption",
+          "writeBucketLogging",
+          "writeBucketNotifications",
+          "writeBucketReplications",
+          "writeBucketRetentions",
+          "writeBuckets",
+          "writeFileLegalHolds",
+          "writeFileRetentions",
+          "writeFiles",
+          "writeKeys"
+      ],
+      "namePrefix": null
+  },
+  "apiUrl": "https://api005.backblazeb2.com",
+  "applicationKey": "K00504+bNDVTXextPF+khXqR5cfP4J4",
+  "applicationKeyId": "0052bac485063ae0000000003",
+  "downloadUrl": "https://f005.backblazeb2.com",
+  "isMasterKey": false,
+  "s3endpoint": "https://s3.us-east-005.backblazeb2.com"
+}
+b2 account get
+
+usages:
+  b2 bucket create              Create a new bucket.
+  b2 bucket delete              Delete the bucket with the given name.
+  b2 bucket get                 Display bucket info
+  b2 bucket get-download-auth   Display authorization token for downloading files
+  b2 bucket list                List all of the buckets in the current account.
+  b2 bucket notification-rule   Bucket notification rules management subcommands.
+  b2 bucket update              Updates the bucketType of an existing bucket.
+b2 bucket list
+b2 bucket get onebuck
+{
+    "accountId": "2bac485063ae",
+    "bucketId": "a2eb8afc74f8e58086d30a1e",
+    "bucketInfo": {},
+    "bucketName": "onebuck",
+    "bucketType": "allPrivate",
+    "corsRules": [],
+    "defaultRetention": {
+        "mode": null
+    },
+    "defaultServerSideEncryption": {
+        "mode": "none"
+    },
+    "isFileLockEnabled": false,
+    "lifecycleRules": [],
+    "options": [
+        "s3"
+    ],
+    "replication": {
+        "asReplicationDestination": null,
+        "asReplicationSource": null
+    },
+    "revision": 2
+}
+
+b2 file url b2://onebuck/xz.jpg
+https://f005.backblazeb2.com/file/onebuck/xz.jpg
+b2 file upload onebuck fn nfn
+b2 file hide b2://onebuck/fn
