@@ -10,7 +10,8 @@ response = requests.get(url=url, headers=headers)
 s = response.text
 print(len(s), end=' ')
 # 匹配视频资源地址
-pattern = r'https://video.twimg.com.+?mp4.+?(?=\\")'
+#pattern = r'https://video.twimg.com(?:(?!https).)+?mp4.+?(?=\\")'
+pattern = r'https://video.twimg.com(?:(?!http).)+?m3u8'
 vurls = re.findall(pattern, s)
 print(len(vurls))
 
