@@ -40,6 +40,7 @@ if ! python -c "import redis" &> /dev/null; then
     pip3 install redis
 fi
 if ! command -v ffmpeg &>/dev/null; then
+    sudo apt update &> /dev/null
     sudo apt install ffmpeg -y
 fi
 curl -O https://raw.githubusercontent.com/haveataste/share/refs/heads/master/asus/uag.py
