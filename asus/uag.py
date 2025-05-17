@@ -30,9 +30,11 @@ if len(vurls) != 0:
     count = 0
     for vurl in vurls:
         pattern = r'([^/?#]+)(?:\?.*)?$'
-        vn = re.search(pattern, vurl).group(1)
+        #vn = re.search(pattern, vurl).group(1)
+        vn = re.search(pattern, vurl).group(1).split('.')[0] + '.mp4'
         if not r.sismember(se, vn):
-            cmd = 'curl -s -O ' + vurl
+            #cmd = 'curl -s -O ' + vurl
+            cmd = 'ffmpeg -i ' + vurl + ' -c copy ./' + vn + ' &> /dev/null'
             os.system(cmd)
             r.sadd(se, vn)
             print(vn, str(round(os.path.getsize(vn)/1024/1024, 2))+'MB')
