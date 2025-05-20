@@ -2,10 +2,6 @@ import requests, redis, re, os, sys
 
 #url = 'https://upskirt-asian-girl.lol/'
 url = sys.argv[1]
-se = 'upskirt'
-if 'toilet' in url:
-    se = 'toilet'
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
     'Content-Type': 'application/json'
@@ -27,6 +23,9 @@ if len(vurls) != 0:
         username="default",
         password="vGtH9u3kGN6vesr1Yl1Fthe2iwvCVdPj",
     )
+    se = 'upskirt'
+    if 'toilet' in url:
+        se = 'toilet'
     count = 0
     for vurl in vurls:
         pattern = r'([^/?#]+)(?:\?.*)?$'
