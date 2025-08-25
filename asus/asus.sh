@@ -39,6 +39,10 @@ fi
 if ! python -c "import redis" &> /dev/null; then
     pip3 install redis
 fi
+# 20250825 install base58 module
+if ! python -c "import base58" &> /dev/null; then
+    pip3 install base58
+fi
 if ! command -v ffmpeg &>/dev/null; then
     sudo apt update &> /dev/null
     sudo apt install ffmpeg -y
